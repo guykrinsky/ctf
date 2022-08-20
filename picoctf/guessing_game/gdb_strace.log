@@ -1,0 +1,350 @@
+21357 restart_syscall(<... resuming interrupted read ...> <unfinished ...>
+21360 futex(0x564949fd49c0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+21359 futex(0x564949fd49c4, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+21357 <... restart_syscall resumed>)    = 1
+21357 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+21357 read(0, "\33", 1)                 = 1
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 1 ([{fd=0, revents=POLLIN}])
+21357 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+21357 read(0, "[", 1)                   = 1
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 1 ([{fd=0, revents=POLLIN}])
+21357 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+21357 read(0, "A", 1)                   = 1
+21357 write(1, "exit", 4)               = 4
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = 1 ([{fd=0, revents=POLLIN}])
+21357 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+21357 read(0, "\33", 1)                 = 1
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 1 ([{fd=0, revents=POLLIN}])
+21357 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+21357 read(0, "[", 1)                   = 1
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 1 ([{fd=0, revents=POLLIN}])
+21357 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+21357 read(0, "A", 1)                   = 1
+21357 write(1, "\10\10\10\10run <output", 15) = 15
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = 1 ([{fd=0, revents=POLLIN}])
+21357 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+21357 read(0, "\r", 1)                  = 1
+21357 write(1, "\n", 1)                 = 1
+21357 write(1, "\33[?2004l\r", 9)       = 9
+21357 ioctl(0, TCGETS, {B38400 opost isig -icanon -echo ...}) = 0
+21357 ioctl(0, SNDCTL_TMR_STOP or TCSETSW, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTERM, {sa_handler=0x564947d274c0, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGHUP, {sa_handler=0x564947d273f0, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGQUIT, {sa_handler=0x564947d27420, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[TSTP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, {sa_handler=0x7fde4b5c19d0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 newfstatat(AT_FDCWD, "/home/guy/projects/ctf/picoctf/guessing_game/vuln", {st_mode=S_IFREG|0777, st_size=850152, ...}, 0) = 0
+21357 newfstatat(AT_FDCWD, "/home/guy/projects/ctf/picoctf/guessing_game/vuln", {st_mode=S_IFREG|0777, st_size=850152, ...}, 0) = 0
+21357 ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 write(1, "Starting program: \33[32m/home/guy"..., 84) = 84
+21357 personality(0xffffffff)           = 0 (PER_LINUX)
+21357 personality(PER_LINUX|ADDR_NO_RANDOMIZE) = 0 (PER_LINUX)
+21357 personality(0xffffffff)           = 0x40000 (PER_LINUX|ADDR_NO_RANDOMIZE)
+21357 vfork( <unfinished ...>
+21378 openat(AT_FDCWD, "/proc/self/fd", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 11
+21378 newfstatat(11, "", {st_mode=S_IFDIR|0500, st_size=0, ...}, AT_EMPTY_PATH) = 0
+21378 getdents64(11, 0x56494a2a2ca0 /* 14 entries */, 32768) = 336
+21378 close(3)                          = 0
+21378 close(4)                          = 0
+21378 close(5)                          = 0
+21378 close(6)                          = 0
+21378 close(7)                          = 0
+21378 close(8)                          = 0
+21378 close(9)                          = 0
+21378 close(10)                         = 0
+21378 getdents64(11, 0x56494a2a2ca0 /* 0 entries */, 32768) = 0
+21378 close(11)                         = 0
+21378 getpid()                          = 21378
+21378 getpid()                          = 21378
+21378 setpgid(21378, 21378)             = 0
+21378 ptrace(PTRACE_TRACEME)            = -1 EPERM (Operation not permitted)
+21378 write(2, "warning: ", 9)          = 9
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 write(2, "Could not trace the inferior pro"..., 37) = 37
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 write(2, "\n", 1)                 = 1
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 write(2, "warning: ", 9)          = 9
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 write(2, "ptrace", 6)             = 6
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 write(2, ": ", 2)                 = 2
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 write(2, "Operation not permitted", 23) = 23
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 write(2, "\n", 1)                 = 1
+21378 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21378 exit_group(127)                   = ?
+21378 +++ exited with 127 +++
+21357 <... vfork resumed>)              = 21378
+21357 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=21378, si_uid=1000, si_status=127, si_utime=0, si_stime=0} ---
+21357 rt_sigreturn({mask=[]})           = 21378
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+21357 wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 127}], WNOHANG|__WALL, NULL) = 21378
+21357 wait4(-1, 0x7ffcbde731bc, WNOHANG|__WALL, NULL) = -1 ECHILD (No child processes)
+21357 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+21357 wait4(21378, 0x7ffcbde73464, 0, NULL) = -1 ECHILD (No child processes)
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 openat(AT_FDCWD, "/proc/21378/maps", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+21357 openat(AT_FDCWD, "/home/guy/projects/ctf/picoctf/guessing_game/vuln", O_RDONLY) = 11
+21357 fcntl(11, F_GETFD)                = 0
+21357 fcntl(11, F_SETFD, FD_CLOEXEC)    = 0
+21357 newfstatat(11, "", {st_mode=S_IFREG|0777, st_size=850152, ...}, AT_EMPTY_PATH) = 0
+21357 lseek(11, 0, SEEK_SET)            = 0
+21357 read(11, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\2\0>\0\1\0\0\0@\n@\0\0\0\0\0"..., 400) = 400
+21357 read(11, "\4\0\0\0\20\0\0\0\1\0\0\0GNU\0\0\0\0\0\3\0\0\0\2\0\0\0\0\0\0\0"..., 4096) = 4096
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 lseek(11, 4496, SEEK_SET)         = 4496
+21357 futex(0x7fde4a766210, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+21357 poll([{fd=0, events=POLLIN}], 1, 0) = 0 (Timeout)
+21357 newfstatat(AT_FDCWD, "/home/guy/projects/ctf/picoctf/guessing_game/vuln", {st_mode=S_IFREG|0777, st_size=850152, ...}, 0) = 0
+21357 close(11)                         = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 personality(PER_LINUX)            = 0x40000 (PER_LINUX|ADDR_NO_RANDOMIZE)
+21357 rt_sigprocmask(SIG_BLOCK, [TTOU], [], 8) = 0
+21357 ioctl(1, TCSBRK, 1)               = 0
+21357 rt_sigprocmask(SIG_UNBLOCK, [TTOU], NULL, 8) = 0
+21357 write(2, "During startup program exited wi"..., 44) = 44
+21357 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 write(2, "\n", 1)                 = 1
+21357 ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 rt_sigaction(SIGINT, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, {sa_handler=0x564947d27490, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fde4a55f520}, 8) = 0
+21357 ioctl(0, TIOCGWINSZ, {ws_row=49, ws_col=101, ws_xpixel=1616, ws_ypixel=1568}) = 0
+21357 ioctl(0, TIOCSWINSZ, {ws_row=49, ws_col=101, ws_xpixel=1616, ws_ypixel=1568}) = 0
+21357 ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+21357 ioctl(0, SNDCTL_TMR_STOP or TCSETSW, {B38400 opost isig -icanon -echo ...}) = 0
+21357 ioctl(0, TCGETS, {B38400 opost isig -icanon -echo ...}) = 0
+21357 write(1, "\33[?2004h", 8)         = 8
+21357 write(1, "\33[1;31mgef\342\236\244  \33[0m", 19) = 19
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+21357 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+21357 write(6, "+", 1)                  = 1
+21357 rt_sigreturn({mask=[]})           = -1 EINTR (Interrupted system call)
+21357 read(5, "+", 1)                   = 1
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 ioctl(0, TIOCGWINSZ, {ws_row=49, ws_col=105, ws_xpixel=1680, ws_ypixel=1568}) = 0
+21357 write(1, "\r\33[K\33[1;31mgef\342\236\244  \33[0m", 23) = 23
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+21357 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+21357 write(6, "+", 1)                  = 1
+21357 rt_sigreturn({mask=[]})           = -1 EINTR (Interrupted system call)
+21357 read(5, "+", 1)                   = 1
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 ioctl(0, TIOCGWINSZ, {ws_row=51, ws_col=105, ws_xpixel=1680, ws_ypixel=1632}) = 0
+21357 write(1, "\r\33[K\33[1;31mgef\342\236\244  \33[0m", 23) = 23
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+21357 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+21357 write(6, "+", 1)                  = 1
+21357 rt_sigreturn({mask=[]})           = -1 EINTR (Interrupted system call)
+21357 read(5, "+", 1)                   = 1
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 ioctl(0, TIOCGWINSZ, {ws_row=49, ws_col=105, ws_xpixel=1680, ws_ypixel=1568}) = 0
+21357 write(1, "\r\33[K\33[1;31mgef\342\236\244  \33[0m", 23) = 23
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+21357 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+21357 write(6, "+", 1)                  = 1
+21357 rt_sigreturn({mask=[]})           = -1 EINTR (Interrupted system call)
+21357 read(5, "+", 1)                   = 1
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 ioctl(0, TIOCGWINSZ, {ws_row=51, ws_col=105, ws_xpixel=1680, ws_ypixel=1632}) = 0
+21357 write(1, "\r\33[K\33[1;31mgef\342\236\244  \33[0m", 23) = 23
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+21357 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+21357 write(6, "+", 1)                  = 1
+21357 rt_sigreturn({mask=[]})           = -1 EINTR (Interrupted system call)
+21357 read(5, "+", 1)                   = 1
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 ioctl(0, TIOCGWINSZ, {ws_row=49, ws_col=105, ws_xpixel=1680, ws_ypixel=1568}) = 0
+21357 write(1, "\r\33[K\33[1;31mgef\342\236\244  \33[0m", 23) = 23
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1) = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+21357 --- SIGWINCH {si_signo=SIGWINCH, si_code=SI_KERNEL} ---
+21357 write(6, "+", 1)                  = 1
+21357 rt_sigreturn({mask=[]})           = -1 EINTR (Interrupted system call)
+21357 read(5, "+", 1)                   = 1
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 ioctl(0, TIOCGWINSZ, {ws_row=49, ws_col=101, ws_xpixel=1616, ws_ypixel=1568}) = 0
+21357 write(1, "\r\33[K\33[1;31mgef\342\236\244  \33[0m", 23) = 23
+21357 read(5, 0x7ffcbde73ab7, 1)        = -1 EAGAIN (Resource temporarily unavailable)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, 0) = 0 (Timeout)
+21357 poll([{fd=3, events=POLLIN}, {fd=5, events=POLLIN}, {fd=9, events=POLLIN}, {fd=0, events=POLLIN}], 4, -1 <detached ...>
