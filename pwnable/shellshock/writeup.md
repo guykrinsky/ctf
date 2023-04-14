@@ -7,4 +7,4 @@ The CVE is a bash vulnerability that by exporting bash function as environment v
 env x='() { :;}; /bin/cat flag' ./shellshock
 ```
 
-[LINK TO WIKIPEDIA ABOUT THE CVE] (https://en.wikipedia.org/wiki/Shellshock_(software_bug))
+[LINK TO WIKIPEDIA ABOUT THE CVE](https://en.wikipedia.org/wiki/Shellshock_(software_bug))
